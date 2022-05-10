@@ -4,12 +4,13 @@ import java.util.*;
 public class Aplicativo {
     void ligar(){
         JOptionPane.showMessageDialog(null,"Bem-Vindo(a) ao App Delivery!");
-
         Restaurante restaurante = new Restaurante();
         Usuarios usuarios = new Usuarios();
-        
+
         String nome_restaurante;
         String cnpj_restaurante;
+        String nome_usuario;
+        String cpf_usuario;
 
         int opcao_entrada = Integer.parseInt(JOptionPane.showInputDialog(null,"Escolha uma das opções abaixo: \n" +
         "(1) - Entrar como um Restaurante \n" +
@@ -31,7 +32,27 @@ public class Aplicativo {
 
             }
             JOptionPane.showMessageDialog(null, "-----------------------------------------\n" + 
-                                                "                CONFIRMADO               \n" +
+                                                "                CADASTRADO               \n" +
+                                                "-----------------------------------------");
+        }
+
+        if(opcao_entrada == 2){
+            int entrar_usuario = Integer.parseInt(JOptionPane.showInputDialog(null,"Escolha uma das opções abaixo: \n" +
+            "(1) - Quero me cadastrar\n"+
+            "(2) - Já possuo um cadastro"));
+
+            if(entrar_usuario == 1){
+                nome_usuario = JOptionPane.showInputDialog(null,"Insira o nome do Usuário: ");
+                cpf_usuario = JOptionPane.showInputDialog(null,"Insira o CPF do Usuário: ");
+
+                myArrayList.add(nome_usuario);
+                myArrayList.add(cpf_usuario);
+
+                JOptionPane.showMessageDialog(null,"Bem-Vindo(a) " + nome_usuario);
+
+            }
+            JOptionPane.showMessageDialog(null, "-----------------------------------------\n" + 
+                                                "                CADASTRADO               \n" +
                                                 "-----------------------------------------");
         }
     }

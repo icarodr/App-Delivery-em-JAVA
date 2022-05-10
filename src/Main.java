@@ -5,6 +5,7 @@ public class Main{
     public static void main(String[] args) {
         String entrar_no_app = JOptionPane.showInputDialog(null, "Deseja entrar no restaurante?");
         Aplicativo app = new Aplicativo();
+        Usuarios app1 = new Usuarios();
         
         while(true){
             if (entrar_no_app.equals("sim")){
